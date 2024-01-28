@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diary of ---username---</title>
+    <link rel="stylesheet" type="text/css" href="---user-page-css---">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="---settings-uri---" id="settingsButton">Settings</a>
+        <form id="logoutForm" action="---log-out-uri---" method="post">
+            <button type="submit" id="logoutButton">Log Out</button>
+        </form>
+    </nav>
+</header>
+<main>
+    <h1>---usernamegreeting---</h1>
+    <form id="diaryForm" method="post" action="---user-page-uri---" enctype="multipart/form-data">
+        <fieldset>
+            <legend>New Diary Post</legend>
+            <label for="diaryTitle">Add A Title (max 200 characters):</label>
+            <input type="text" id="diaryTitle" name="title" placeholder="Title" maxlength="200" required><br>
+            <label for="diaryPost">Add Diary Post (max 20.000 characters):</label>
+            <textarea id="diaryPost" name="diary-post" rows="10" cols="25" placeholder="Diary post" maxlength="20000" required></textarea><br>
+            <label for="diaryImage">Add An Image (optional, supported: jpeg, png, gif; max file size 5MB):</label>
+            <input type="file" id="diaryImage" name="image" accept="image/jpeg,image/png,image/gif"><br>
+            <label for="imgCaption">Add Image Caption (optional, max 200 characters):</label>
+            <input type="text" id="imgCaption" name="image-caption" placeholder="Image Caption" maxlength="200"><br>
+            <!--===user-message===-->
+            <p class="userMessage" role="alert">---user-message---</p>
+            <!--===user-message===-->
+            <button type="submit" name="push_button">Post!</button>
+        </fieldset>
+    </form>
+    <hr>
+    <!--===entries===-->
+    <section id="entry---no---">
+        <h2>---title---</h2>
+        <p>
+            <strong>Post: #</strong>---no---<br>
+            <strong>Posted: </strong>---time---<br>
+        </p>
+        <p class="post">---post---</p>
+        <figure>
+            <img class="postedImg" src="---image-uri---?id=---imageId---" alt="---altTag---">
+            <figcaption>---altTag---</figcaption>
+        </figure>
+        <hr>
+    </section>
+    <!--===entries===-->
+</main>
+</body>
+</html>

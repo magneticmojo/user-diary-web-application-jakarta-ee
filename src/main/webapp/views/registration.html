@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register New User</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="---login-uri---">Log In</a>
+    </nav>
+</header>
+<main>
+    <h1>Register New User</h1>
+    <form id="registerForm" method="post" action="---registration-authentication-uri---">
+        <fieldset>
+            <legend>Enter User Information</legend>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <!--===user-message===-->
+            <p id="userMessage" role="alert">---user-message---</p>
+            <!--===user-message===-->
+        </fieldset>
+        <input type="submit" value="Register">
+    </form>
+</main>
+</body>
+</html>

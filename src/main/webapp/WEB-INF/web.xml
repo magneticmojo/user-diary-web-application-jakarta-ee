@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+    <display-name>Journeyman - My Diary</display-name>
+
+    <welcome-file-list>
+        <welcome-file>login</welcome-file>
+    </welcome-file-list>
+
+    <!--Exceptions-->
+    <error-page>
+        <exception-type>jakarta.mail.MessagingException</exception-type>
+        <location>/error/messagingexception.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.io.IOException</exception-type>
+        <location>/error/ioexception.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>jakarta.servlet.ServletException</exception-type>
+        <location>/error/servletexception.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.RuntimeException</exception-type>
+        <location>/error/runtimeexception.html</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.AssertionError</exception-type>
+        <location>/error/assertionerror.html</location>
+    </error-page>
+
+    <!--Error Codes-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.html</location>
+    </error-page>
+
+    <error-page>
+        <error-code>405</error-code>
+        <location>/error/405.html</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.html</location>
+    </error-page>
+</web-app>

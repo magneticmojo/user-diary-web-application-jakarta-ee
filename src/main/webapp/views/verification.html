@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Verification</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="---login-uri---">Log In</a>
+    </nav>
+</header>
+<main>
+    <h1>Account Verification</h1>
+    <p id="userMessage" role="alert">---user-message---</p>
+    <form id="codeVerificationForm" action="---verification-uri---" method="post">
+        <label for="verificationCode">Enter Verification Code:</label>
+        <input type="text" id="verificationCode" name="verificationCode" required><br>
+        <button type="submit" value="Verify Account">Verify Account</button>
+    </form>
+    <form id="sendNewCodeForm" action="---email-sender-uri---" method="post">
+        <input type="hidden" name="sendNewCode" value="sendNewCodeForm">
+        <input type="submit" id="sendNewCode" value="Send New Code">
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="---login-uri---">Log In</a>
+    </nav>
+</header>
+<main>
+    <h1>My Diary</h1>
+    <form id="loginForm" method="post" action="---login-uri---">
+
+        <fieldset>
+            <legend>Enter Login Information</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <!--===user-message===-->
+            <p id="userMessage" role="alert">---user-message---</p>
+            <!--===user-message===-->
+        </fieldset>
+        <input type="submit" value="Log in">
+    </form>
+    <form id="registrationButton" action="---registration-uri---" method="get">
+        <input type="submit" value="Register">
+    </form>
+</main>
+</body>
+</html>
